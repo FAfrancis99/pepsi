@@ -1,0 +1,36 @@
+fahim.francis
+209177575
+
+the trees package  designed to represent various elements of a tree in a game world.
+The package is divided into several classes, each representing a different component of a tree.
+Here are the different classes  created in the package:
+
+Flora: This class represents a collection of trees in the game world.
+It contains methods for creating trees within
+a certain range based on a probability to simulate randomness in nature.
+
+Tree: This class extends GameObject and implements AvatarJumpObserver.
+It represents a tree composed of trunk blocks, leaves, and fruits.
+The tree can react to an avatar’s jump by changing its color and rotating its leaves.
+
+Leaf: This class extends Block and represents a leaf in the game world.
+The leaf is part of a tree and has animations for dimension and angle transitions.
+
+Trunk: This class extends Block and represents
+a trunk in the game world. The trunk is part of a tree and has a specific color.
+
+The relationships between these classes are as follows:
+
+The Flora class uses the Tree class to create individual trees.
+The Tree class uses the Leaf and Trunk classes to create the components of a tree.
+
+Regarding design patterns:
+This pattern that i used allows  to compose objects into tree structures to represent part-whole hierarchies.
+Here, Tree acts as the composite that can contain multiple Leaf and Trunk objects (the components).
+This makes it easier to work with the objects in the composition uniformly.
+
+Additionally, the Tree class implements the AvatarJumpObserver interface,
+which is an Observer Design Pattern.
+This pattern allows an object (in this case, Tree) to automatically notify dependent objects (the observers)
+when its state changes. In this context,the Tree notifies its components (Leaf and Trunk)
+when an avatar jumps.
